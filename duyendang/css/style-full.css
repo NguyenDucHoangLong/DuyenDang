@@ -1,0 +1,165 @@
+﻿body 
+{
+    background-color: #f1ebea;
+    margin: 0 0 0 0;
+    font-family: Tahoma;
+    font-size: 13pt;
+    position: relative;
+}
+
+/* BEGIN - CAI FONT */
+@font-face {
+ font-family:font_HAIBATRUNG;
+ src:url("../Fonts/UVNHAIBATRUNG.ttf") format("truetype"),
+ url("../Fonts/UVNHAIBATRUNG.eot#iefix") format("embedded-opentype"),
+ url("../Fonts/UVNHAIBATRUNG.woff") format("woff");
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:font_BayBuom;
+ src:url("../Fonts/UVNBAYBUOMHEP_r_0.ttf") format("truetype"),
+ url("../Fonts/UVNBAYBUOMHEP_r_0.eot#iefix") format("embedded-opentype"),
+ url("../Fonts/UVNBAYBUOMHEP_r_0.woff") format("woff");
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:font_MauTim;
+ src:url("../Fonts/UVNMAUTIM1_0.ttf") format("truetype"),
+ url("../Fonts/UVNMAUTIM1_0.eot#iefix") format("embedded-opentype"),
+ url("../Fonts/UVNMAUTIM1_0.woff") format("woff");
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:font_TinTuc;
+ src:url("../Fonts/UVNTINTUCHEPTHEM.ttf") format("truetype"),
+ url("../Fonts/UVNTINTUCHEPTHEM.eot#iefix") format("embedded-opentype"),
+ url("../Fonts/UVNTINTUCHEPTHEM.woff") format("woff");
+ font-weight:normal;
+ font-style:normal;
+}
+/* END - CAI FONT */
+
+#navigation
+{
+    width: 1200px;
+    margin-top: 100px;
+}
+#nav-left
+{
+    width: 30px;
+    height: 83px;
+    background: transparent url(../Images/navi-left.png) no-repeat left;
+}
+#nav-right
+{
+    width: 33px;
+    height: 83px;
+    background: transparent url(../Images/navi-right.png) no-repeat right;
+}
+#nav-center
+{
+    width: 1137px;
+    height: 83px;
+    background: transparent url(../Images/navi-center.png) repeat-x;
+    position: relative;
+}
+#nav-center a
+{
+    font-family: font_HAIBATRUNG;
+    font-size: 18pt;
+    color: White;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+#nav-center a:hover
+{
+    color: #d8ff00;
+}
+.nav-padding
+{
+    padding-top: 100px;
+}
+#logo
+{
+    width: 216px;
+    height: 216px;
+    position: absolute;
+    background: transparent url(../Images/logo.png) no-repeat center;
+    z-index: 2;
+    margin-top: -116px;
+}
+#footer
+{
+    width: 100%;
+    min-width: 1200px;
+    height: 100px;
+    background-color: #71486a;
+    padding: 20px 0px 20px 0px;
+    color: #dac5d6;
+    font-size: 13px;
+    line-height: 22px;
+    margin-top: 50px;
+}
+.Font_BayBuom
+{
+    font-family: font_BayBuom;
+    font-size: 17pt;
+    line-height: 35px;
+}
+.Font_MauTim
+{
+    font-family: font_MauTim;
+    font-size: 17pt;
+    line-height: 35px;
+}
+#slide-banner
+{
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    min-width: 1200px;
+    z-index:-1;
+    margin-top: -100px;
+}
+#thumb-slide
+{
+    width: 1200px;
+    min-width: 1200px;
+    position: absolute;
+    z-index: 4;
+    background: transparent url(../Images/bg-slide.png);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+.bogoc
+{
+    background-color: #fff;
+    border: 1px solid #c2c2c2;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+}
+.canhchu
+{
+    color: #696969; 
+    text-align: justify;
+}
+.vien
+{
+    border: 1px solid #c2c2c2;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}

@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/style-full.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div align="center">
+            <div id="navigation">
+                <table border="0" cellpadding="0" cellspacing="0" width="1200px">
+                    <tr>
+                        <td>
+                            <div id="nav-left"></div>
+                        </td>
+                        <td>
+                            <div id="nav-center">
+                                <table border="0" cellpadding="0" cellspacing="0" width="1137px" style="height: 83px">
+                                    <tr>
+                                        <td align="center" width="148px">
+                                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/index.aspx">TRANG CHỦ</asp:HyperLink>
+                                        </td>
+                                        <td align="center" width="9">
+                                            <img src="~/Images/note.png" />
+                                        </td>
+                                        <td align="center" width="148px">
+                                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/photobook.aspx">PHOTOBOOK</asp:HyperLink>
+                                        </td>
+                                        <td align="center" width="9">
+                                            <img src="~/Images/note.png" />
+                                        </td>
+                                        <td align="center" width="147px">
+                                            <asp:HyperLink ID="HyperLink3" runat="server">BÉ YÊU</asp:HyperLink>
+                                        </td>
+                                        <td align="center" width="216px">
+                                            <div id="logo"></div>
+                                        </td>
+                                        <td align="center" width="147px">
+                                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/index.aspx">WEBDING</asp:HyperLink>
+                                        </td>
+                                        <td align="center" width="9">
+                                            <img src="~/Images/note.png" />
+                                        </td>
+                                        <td align="center" width="147px">
+                                            <asp:HyperLink ID="HyperLink5" runat="server">CẶP ĐÔI</asp:HyperLink>
+                                        </td>
+                                        <td align="center" width="9">
+                                            <img src="~/Images/note.png" />
+                                        </td>
+                                        <td align="center" width="148px">
+                                            <asp:HyperLink ID="HyperLink6" runat="server">LIÊN HỆ</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="nav-right"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div align="center" style="margin-top: 50px">
+                @RenderBody()
+            </div>
+            <div id="footer" align="center">
+                <table border="0" cellpadding="0" cellspacing="0" width="1200px">
+                    <tr>
+                        <td align="left" width="387px">
+                            <span class="Font_BayBuom">Tiệm chụp hình </span> <span class="Font_MauTim">DUYÊN DÁNG</span><br />
+
+                            - Địa chỉ: Đường 30/4, P. Trung Dũng, TP. Biên Hòa, Đồng Nai <br />
+                            - Điện thoại: 0989.210.469 - 0901.552.071 <br />
+                            - Email: duyendang176@gmail.com
+                        </td>
+                        <td width="10px" style="border-right:1px solid #b69db1;"></td>
+                        <td width="20px"></td>
+                        <td align="left" width="376px" style="vertical-align: top">
+                            <span class="Font_BayBuom">Hướng dẫn</span><br />
+
+                            <asp:HyperLink ID="HyperLink7" runat="server">- Gửi file & đơn đặt hàng</asp:HyperLink> <br />
+                            <asp:HyperLink ID="HyperLink8" runat="server">- Bảng tính giá</asp:HyperLink>
+                        </td>
+                        <td width="10px" style="border-right:1px solid #b69db1;"></td>
+                        <td width="20px"></td>
+                        <td align="left" width="377px" style="vertical-align: top">
+                            <span class="Font_BayBuom">Liên kết</span><br />
+                            <img src="~/Images/fb.png" /><img src="~/Images/web.png" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
