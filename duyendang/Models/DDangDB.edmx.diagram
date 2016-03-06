@@ -5,12 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a0f5d4fed4f640ff9e5912b2d432869a" Name="Diagram1">
-        <EntityTypeShape EntityType="DUYENDANGDBModel.album" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DUYENDANGDBModel.cataloge" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DUYENDANGDBModel.information" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DUYENDANGDBModel.user" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="DUYENDANGDBModel.FK_album_cataloge" ManuallyRouted="false" />
-        <AssociationConnector Association="DUYENDANGDBModel.FK_information_cataloge" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DUYENDANGDBModel.album" Width="1.5" PointX="3" PointY="4" />
+        <EntityTypeShape EntityType="DUYENDANGDBModel.cataloge" Width="1.5" PointX="0.75" PointY="2.25" />
+        <EntityTypeShape EntityType="DUYENDANGDBModel.information" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="DUYENDANGDBModel.user" Width="1.5" PointX="5.75" PointY="0.75" />
+        <AssociationConnector Association="DUYENDANGDBModel.FK_album_cataloge" />
+        <AssociationConnector Association="DUYENDANGDBModel.FK_information_cataloge" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

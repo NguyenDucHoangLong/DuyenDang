@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DUYENDANGDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DUYENDANGDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="album">
           <Key>
             <PropertyRef Name="id" />
@@ -79,11 +79,24 @@
             <End Role="information" EntitySet="information" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DUYENDANGDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DUYENDANGDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="albums" EntityType="DUYENDANGDBModel.album" />
+          <EntitySet Name="cataloges" EntityType="DUYENDANGDBModel.cataloge" />
+          <EntitySet Name="information" EntityType="DUYENDANGDBModel.information" />
+          <EntitySet Name="users" EntityType="DUYENDANGDBModel.user" />
+          <AssociationSet Name="FK_album_cataloge" Association="DUYENDANGDBModel.FK_album_cataloge">
+            <End Role="cataloge" EntitySet="cataloges" />
+            <End Role="album" EntitySet="albums" />
+          </AssociationSet>
+          <AssociationSet Name="FK_information_cataloge" Association="DUYENDANGDBModel.FK_information_cataloge">
+            <End Role="cataloge" EntitySet="cataloges" />
+            <End Role="information" EntitySet="information" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="album">
           <Key>
             <PropertyRef Name="id" />
@@ -91,7 +104,7 @@
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="catalogeId" Type="Int32" />
-          <NavigationProperty Name="cataloge" Relationship="Self.FK_album_cataloge" FromRole="album" ToRole="cataloge" />
+          <NavigationProperty Name="cataloge" Relationship="DUYENDANGDBModel.FK_album_cataloge" FromRole="album" ToRole="cataloge" />
         </EntityType>
         <EntityType Name="cataloge">
           <Key>
@@ -102,8 +115,8 @@
           <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="show" Type="Boolean" />
-          <NavigationProperty Name="albums" Relationship="Self.FK_album_cataloge" FromRole="cataloge" ToRole="album" />
-          <NavigationProperty Name="information" Relationship="Self.FK_information_cataloge" FromRole="cataloge" ToRole="information" />
+          <NavigationProperty Name="albums" Relationship="DUYENDANGDBModel.FK_album_cataloge" FromRole="cataloge" ToRole="album" />
+          <NavigationProperty Name="information" Relationship="DUYENDANGDBModel.FK_information_cataloge" FromRole="cataloge" ToRole="information" />
         </EntityType>
         <EntityType Name="information">
           <Key>
@@ -114,7 +127,7 @@
           <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="catalogeId" Type="Int32" />
-          <NavigationProperty Name="cataloge" Relationship="Self.FK_information_cataloge" FromRole="information" ToRole="cataloge" />
+          <NavigationProperty Name="cataloge" Relationship="DUYENDANGDBModel.FK_information_cataloge" FromRole="information" ToRole="cataloge" />
         </EntityType>
         <EntityType Name="user">
           <Key>
@@ -125,8 +138,8 @@
           <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_album_cataloge">
-          <End Role="cataloge" Type="Self.cataloge" Multiplicity="0..1" />
-          <End Role="album" Type="Self.album" Multiplicity="*" />
+          <End Type="DUYENDANGDBModel.cataloge" Role="cataloge" Multiplicity="0..1" />
+          <End Type="DUYENDANGDBModel.album" Role="album" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="cataloge">
               <PropertyRef Name="id" />
@@ -137,8 +150,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_information_cataloge">
-          <End Role="cataloge" Type="Self.cataloge" Multiplicity="0..1" />
-          <End Role="information" Type="Self.information" Multiplicity="*" />
+          <End Type="DUYENDANGDBModel.cataloge" Role="cataloge" Multiplicity="0..1" />
+          <End Type="DUYENDANGDBModel.information" Role="information" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="cataloge">
               <PropertyRef Name="id" />
@@ -148,20 +161,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DUYENDANGDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="albums" EntityType="Self.album" />
-          <EntitySet Name="cataloges" EntityType="Self.cataloge" />
-          <EntitySet Name="information" EntityType="Self.information" />
-          <EntitySet Name="users" EntityType="Self.user" />
-          <AssociationSet Name="FK_album_cataloge" Association="Self.FK_album_cataloge">
-            <End Role="cataloge" EntitySet="cataloges" />
-            <End Role="album" EntitySet="albums" />
-          </AssociationSet>
-          <AssociationSet Name="FK_information_cataloge" Association="Self.FK_information_cataloge">
-            <End Role="cataloge" EntitySet="cataloges" />
-            <End Role="information" EntitySet="information" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -171,40 +170,40 @@
           <EntitySetMapping Name="albums">
             <EntityTypeMapping TypeName="DUYENDANGDBModel.album">
               <MappingFragment StoreEntitySet="album">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="image" ColumnName="image" />
                 <ScalarProperty Name="catalogeId" ColumnName="catalogeId" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="cataloges">
             <EntityTypeMapping TypeName="DUYENDANGDBModel.cataloge">
               <MappingFragment StoreEntitySet="cataloge">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="image" ColumnName="image" />
-                <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="show" ColumnName="show" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="information">
             <EntityTypeMapping TypeName="DUYENDANGDBModel.information">
               <MappingFragment StoreEntitySet="information">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="description" ColumnName="description" />
-                <ScalarProperty Name="image" ColumnName="image" />
                 <ScalarProperty Name="catalogeId" ColumnName="catalogeId" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="users">
             <EntityTypeMapping TypeName="DUYENDANGDBModel.user">
               <MappingFragment StoreEntitySet="user">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
