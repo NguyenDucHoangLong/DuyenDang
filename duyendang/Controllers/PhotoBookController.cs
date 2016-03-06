@@ -11,6 +11,8 @@ namespace duyendang.Controllers
         // GET: PhotoBook
         public ActionResult Index()
         {
+            ViewBag.Title = "PhotoBook";
+
             return View();
         }
     }
