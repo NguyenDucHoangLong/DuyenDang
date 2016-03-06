@@ -1,0 +1,93 @@
+﻿@using duyendang.Models;
+@model List<cataloge>
+ 
+        <table width="1099px" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="289px">
+                    <img src="~/Images/photobook.png" /> <span style="display: none">Photobook giá rẻ, photobook là gì, photobook đẹp, photobook chuyên nghiệp, photobook gia re, photobook la gi, photobook dep, photobook chuyen nghiep</span>
+                </td>
+                <td width="116px"></td>
+                <td width="289px">
+                    <img src="~/Images/albumbe.png" /> <span style="display: none">Chụp hình bé yêu, chup hinh be yeu, album giá rẻ, album gia re, album be</span>
+                </td>
+                <td width="116px"></td>
+                <td width="289px">
+                    <img src="~/Images/lich.png" /> <span style="display: none">Lịch để bàn, lich de ban, Lịch treo tường, Lich treo tuong, Lich couple</span>
+                </td>
+            </tr>
+            <tr>
+                <td width="289px" style="padding-top:10px;">
+                   @* <img class="vien" src="~/Images/pic1.png" />*@
+                    <img class="vien"  src="@Url.Content("~/Images/" + Model[0].image)" />
+                </td>
+                <td width="116px"></td>
+                <td width="289px">
+                    @*<img class="vien" src="~/Images/pic2.png" />*@
+                    <img class="vien"  src="@Url.Content("~/Images/" + Model[1].image)" />
+                </td>
+                <td width="116px"></td>
+                <td width="289px">
+                    @*<img class="vien" src="~/Images/pic3.png" />*@
+                    <img class="vien" src="@Url.Content("~/Images/" + Model[2].image)" />
+                </td>
+            </tr>
+            <tr>
+                <td class="canhchu" width="289px" style="padding-top:10px;">
+                  @Model[0].description
+                </td>
+                <td width="116px"></td>
+                <td class="canhchu" width="289px">
+                    @Model[1].description
+                </td>
+                <td width="116px"></td>
+                <td class="canhchu" width="289px">
+                    @Model[2].description
+                </td>
+            </tr>
+        </table>
+
+        <table width="1099px" border="0" cellpadding="0" cellspacing="0" style="margin-top: 40px; padding-bottom: 40px">
+            <tr>
+                <td width="289px">
+                    <img src="~/Images/sokyten.png" /><span style="display: none">Sổ ký tên ngày cưới, so ky ten ngay cuoi, Sổ lưu niệm, so luu niem, so ky ten doc dao, Sổ ký tên độc đáo</span>
+                </td>
+                <td width="116px"></td>
+                <td width="289px">
+                    <img src="~/Images/thiepcuoi.png" /> <span style="display: none">Thiệp cưới đẹp, thiep cuoi dep, Thiệp cưới 2016, thiep cuoi 2016</span>
+                </td>
+                <td width="116px"></td>
+                <td width="289px">
+                    <img src="~/Images/cardvisit.png" /> <span style="display: none">Card visit chuyên nghiệp, cardvisit chuyen nghiep, cardvisit ca nhan, cardvisit trong suot, cardvisit nhua, cardvisit platis, cardvisit cho doanh nghiep</span>
+                </td>
+            </tr>
+            <tr>
+                <td width="289px" style="padding-top:10px;">
+                    @*<img class="vien" src="~/Images/pic4.png" />*@
+                    <img class="vien" src="@Url.Content("~/Images/" + Model[3].image)" />
+                </td>
+                <td width="116px"></td>
+                <td width="289px">
+                    @*<img class="vien" src="~/Images/pic5.png" />*@
+                    <img class="vien" src="@Url.Content("~/Images/" + Model[4].image)" />
+                </td>
+                <td width="116px"></td>
+                <td width="289px">
+                   @* <img class="vien" src="~/Images/pic6.png" />*@
+                    <img class="vien" src="@Url.Content("~/Images/" + Model[5].image)" />
+                </td>
+            </tr>
+            <tr>
+                <td class="canhchu" width="289px" style="padding-top:10px;">
+                    @Model[3].description
+                </td>
+                <td width="116px"></td>
+                <td class="canhchu" width="289px">
+                    @Model[4].description
+                </td>
+                <td width="116px"></td>
+                <td class="canhchu" width="289px">
+                    @Model[5].description
+                </td>
+            </tr>
+        </table>
+    
