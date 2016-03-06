@@ -29,7 +29,7 @@ namespace duyendang.Controllers
         //Category home partial
         public PartialViewResult CategoryHomePartial()
         {
-             var lstCategory = db.cataloges.Where(c => c.id > 1 && c.id <= 7).ToList();
+            var lstCategory = db.cataloges.Where(c => c.show == true).ToList();
            // id từ Dịch Vụ PhotoBook đến Card Visit ở Home
              return PartialView(lstCategory);
         }
