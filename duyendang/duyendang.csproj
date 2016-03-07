@@ -170,6 +170,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CardVisitController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\EcardController.cs" />
@@ -218,8 +219,12 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\metisMenu.min.js" />
+    <Content Include="css\sb-admin-2.css" />
     <Content Include="css\style-full.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\font-awesome.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -302,13 +307,16 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\metisMenu.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\sb-admin-2.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Slide-Index\a11.png" />
     <Content Include="Slide-Index\css\StyleSheet.css" />
@@ -367,6 +375,8 @@
     <Content Include="Views\Baby\AlbumBabyPartial.cshtml" />
     <Content Include="Views\SignatureBook\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Manager.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
