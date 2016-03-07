@@ -22,7 +22,7 @@ namespace duyendang.Controllers
                 Response.StatusCode = 404;
                 return null;
             }
-
+            ViewBag.Title = "Home";
             return View(Cataloge);
         }
 

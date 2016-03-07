@@ -170,11 +170,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CardVisitController.cs" />
+    <Compile Include="Controllers\EcardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PhotoBookController.cs" />
     <Compile Include="Controllers\BabyController.cs" />
+    <Compile Include="Controllers\SignatureBookController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -361,9 +364,12 @@
     <Content Include="Views\Baby\Index.cshtml" />
     <Content Include="Views\Index\CategoryHomePartial.cshtml" />
     <Content Include="Views\Baby\AlbumBabyPartial.cshtml" />
+    <Content Include="Views\SignatureBook\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\CardVisit\" />
+    <Folder Include="Views\Ecard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

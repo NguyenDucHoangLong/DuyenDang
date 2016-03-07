@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace duyendang.Controllers
 {
-    public class PhotoBookController : Controller
+    public class CardVisitController : Controller
     {
-        // GET: PhotoBook
+        // GET: CardVisit
         public ActionResult Index()
         {
-            ViewBag.Title = "PhotoBook";
             return View();
         }
     }
