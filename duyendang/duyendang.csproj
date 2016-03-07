@@ -367,11 +367,12 @@
     <Content Include="Views\Baby\AlbumBabyPartial.cshtml" />
     <Content Include="Views\SignatureBook\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\CardVisit\Index.cshtml" />
+    <Content Include="Views\Ecard\Index.cshtml" />
+    <Content Include="Views\Index\SliderPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\CardVisit\" />
-    <Folder Include="Views\Ecard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
