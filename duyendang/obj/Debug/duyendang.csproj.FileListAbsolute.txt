@@ -204,72 +204,72 @@ E:\eazy\duyendang\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\eazy\duyendang\obj\Debug\duyendang.csprojResolveAssemblyReference.cache
 E:\eazy\duyendang\obj\Debug\duyendang.dll
 E:\eazy\duyendang\obj\Debug\duyendang.pdb
-E:\GitHub\duyendang\bin\roslyn\csc.exe
-E:\GitHub\duyendang\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-E:\GitHub\duyendang\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-E:\GitHub\duyendang\bin\roslyn\Microsoft.CodeAnalysis.dll
-E:\GitHub\duyendang\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-E:\GitHub\duyendang\bin\roslyn\Microsoft.CSharp.Core.targets
-E:\GitHub\duyendang\bin\roslyn\Microsoft.VisualBasic.Core.targets
-E:\GitHub\duyendang\bin\roslyn\System.Collections.Immutable.dll
-E:\GitHub\duyendang\bin\roslyn\System.Reflection.Metadata.dll
-E:\GitHub\duyendang\bin\roslyn\vbc.exe
-E:\GitHub\duyendang\bin\roslyn\VBCSCompiler.exe
-E:\GitHub\duyendang\bin\roslyn\VBCSCompiler.exe.config
-E:\GitHub\duyendang\bin\duyendang.dll.config
-E:\GitHub\duyendang\bin\duyendang.dll
-E:\GitHub\duyendang\bin\duyendang.pdb
-E:\GitHub\duyendang\bin\Antlr3.Runtime.dll
-E:\GitHub\duyendang\bin\EntityFramework.dll
-E:\GitHub\duyendang\bin\EntityFramework.SqlServer.dll
-E:\GitHub\duyendang\bin\Microsoft.AspNet.Identity.Core.dll
-E:\GitHub\duyendang\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-E:\GitHub\duyendang\bin\Microsoft.AspNet.Identity.Owin.dll
-E:\GitHub\duyendang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-E:\GitHub\duyendang\bin\Microsoft.Owin.dll
-E:\GitHub\duyendang\bin\Microsoft.Owin.Host.SystemWeb.dll
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.Cookies.dll
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.dll
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.Facebook.dll
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.Google.dll
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.OAuth.dll
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.Twitter.dll
-E:\GitHub\duyendang\bin\Microsoft.Web.Infrastructure.dll
-E:\GitHub\duyendang\bin\Newtonsoft.Json.dll
-E:\GitHub\duyendang\bin\Owin.dll
-E:\GitHub\duyendang\bin\System.Web.Helpers.dll
-E:\GitHub\duyendang\bin\System.Web.Mvc.dll
-E:\GitHub\duyendang\bin\System.Web.Optimization.dll
-E:\GitHub\duyendang\bin\System.Web.Razor.dll
-E:\GitHub\duyendang\bin\System.Web.WebPages.Deployment.dll
-E:\GitHub\duyendang\bin\System.Web.WebPages.dll
-E:\GitHub\duyendang\bin\System.Web.WebPages.Razor.dll
-E:\GitHub\duyendang\bin\WebGrease.dll
-E:\GitHub\duyendang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\GitHub\duyendang\bin\System.Web.Helpers.xml
-E:\GitHub\duyendang\bin\System.Web.Mvc.xml
-E:\GitHub\duyendang\bin\System.Web.Optimization.xml
-E:\GitHub\duyendang\bin\System.Web.Razor.xml
-E:\GitHub\duyendang\bin\System.Web.WebPages.xml
-E:\GitHub\duyendang\bin\System.Web.WebPages.Deployment.xml
-E:\GitHub\duyendang\bin\System.Web.WebPages.Razor.xml
-E:\GitHub\duyendang\bin\Antlr3.Runtime.pdb
-E:\GitHub\duyendang\bin\Newtonsoft.Json.xml
-E:\GitHub\duyendang\bin\EntityFramework.xml
-E:\GitHub\duyendang\bin\EntityFramework.SqlServer.xml
-E:\GitHub\duyendang\bin\Microsoft.AspNet.Identity.Core.xml
-E:\GitHub\duyendang\bin\Microsoft.AspNet.Identity.Owin.xml
-E:\GitHub\duyendang\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-E:\GitHub\duyendang\bin\Microsoft.Owin.xml
-E:\GitHub\duyendang\bin\Microsoft.Owin.Host.SystemWeb.xml
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.xml
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.Facebook.xml
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.Cookies.xml
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.OAuth.xml
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.Google.xml
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.Twitter.xml
-E:\GitHub\duyendang\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\GitHub\duyendang\obj\Debug\duyendang.csprojResolveAssemblyReference.cache
-E:\GitHub\duyendang\obj\Debug\duyendang.dll
-E:\GitHub\duyendang\obj\Debug\duyendang.pdb
+D:\Học tập\dự án\duyendang\bin\roslyn\csc.exe
+D:\Học tập\dự án\duyendang\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Học tập\dự án\duyendang\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Học tập\dự án\duyendang\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Học tập\dự án\duyendang\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Học tập\dự án\duyendang\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Học tập\dự án\duyendang\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Học tập\dự án\duyendang\bin\roslyn\System.Collections.Immutable.dll
+D:\Học tập\dự án\duyendang\bin\roslyn\System.Reflection.Metadata.dll
+D:\Học tập\dự án\duyendang\bin\roslyn\vbc.exe
+D:\Học tập\dự án\duyendang\bin\roslyn\VBCSCompiler.exe
+D:\Học tập\dự án\duyendang\bin\roslyn\VBCSCompiler.exe.config
+D:\Học tập\dự án\duyendang\bin\duyendang.dll.config
+D:\Học tập\dự án\duyendang\bin\duyendang.dll
+D:\Học tập\dự án\duyendang\bin\duyendang.pdb
+D:\Học tập\dự án\duyendang\bin\Antlr3.Runtime.dll
+D:\Học tập\dự án\duyendang\bin\EntityFramework.dll
+D:\Học tập\dự án\duyendang\bin\EntityFramework.SqlServer.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.Google.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.Web.Infrastructure.dll
+D:\Học tập\dự án\duyendang\bin\Newtonsoft.Json.dll
+D:\Học tập\dự án\duyendang\bin\Owin.dll
+D:\Học tập\dự án\duyendang\bin\System.Web.Helpers.dll
+D:\Học tập\dự án\duyendang\bin\System.Web.Mvc.dll
+D:\Học tập\dự án\duyendang\bin\System.Web.Optimization.dll
+D:\Học tập\dự án\duyendang\bin\System.Web.Razor.dll
+D:\Học tập\dự án\duyendang\bin\System.Web.WebPages.Deployment.dll
+D:\Học tập\dự án\duyendang\bin\System.Web.WebPages.dll
+D:\Học tập\dự án\duyendang\bin\System.Web.WebPages.Razor.dll
+D:\Học tập\dự án\duyendang\bin\WebGrease.dll
+D:\Học tập\dự án\duyendang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Học tập\dự án\duyendang\bin\System.Web.Helpers.xml
+D:\Học tập\dự án\duyendang\bin\System.Web.Mvc.xml
+D:\Học tập\dự án\duyendang\bin\System.Web.Optimization.xml
+D:\Học tập\dự án\duyendang\bin\System.Web.Razor.xml
+D:\Học tập\dự án\duyendang\bin\System.Web.WebPages.xml
+D:\Học tập\dự án\duyendang\bin\System.Web.WebPages.Deployment.xml
+D:\Học tập\dự án\duyendang\bin\System.Web.WebPages.Razor.xml
+D:\Học tập\dự án\duyendang\bin\Antlr3.Runtime.pdb
+D:\Học tập\dự án\duyendang\bin\Newtonsoft.Json.xml
+D:\Học tập\dự án\duyendang\bin\EntityFramework.xml
+D:\Học tập\dự án\duyendang\bin\EntityFramework.SqlServer.xml
+D:\Học tập\dự án\duyendang\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Học tập\dự án\duyendang\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Học tập\dự án\duyendang\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.xml
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.xml
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.Google.xml
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Học tập\dự án\duyendang\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Học tập\dự án\duyendang\obj\Debug\duyendang.csprojResolveAssemblyReference.cache
+D:\Học tập\dự án\duyendang\obj\Debug\duyendang.dll
+D:\Học tập\dự án\duyendang\obj\Debug\duyendang.pdb
