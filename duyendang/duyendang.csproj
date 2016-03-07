@@ -171,6 +171,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CardVisitController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\EcardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
@@ -365,6 +366,7 @@
     <Content Include="Views\Index\CategoryHomePartial.cshtml" />
     <Content Include="Views\Baby\AlbumBabyPartial.cshtml" />
     <Content Include="Views\SignatureBook\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
