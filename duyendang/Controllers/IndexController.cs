@@ -22,7 +22,6 @@ namespace duyendang.Controllers
                 Response.StatusCode = 404;
                 return null;
             }
-            ViewBag.Title = "Home";
             return View(Cataloge);
         }
 
@@ -32,6 +31,11 @@ namespace duyendang.Controllers
             var lstCategory = db.cataloges.Where(c => c.show == true).ToList();
            // id từ Dịch Vụ PhotoBook đến Card Visit ở Home
              return PartialView(lstCategory);
+        }
+
+        public PartialViewResult SliderPartial()
+        {
+            return PartialView();
         }
     }
 }
