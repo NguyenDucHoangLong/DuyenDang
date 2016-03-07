@@ -28,7 +28,7 @@ namespace duyendang.Controllers
             else
             {
                 Session["user"] = username;
-                return RedirectToAction("");
+                return RedirectToAction("Manager");
             }
         }
 
