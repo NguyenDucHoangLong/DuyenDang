@@ -1,0 +1,13 @@
+﻿@model duyendang.Models.information
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/layout_admin.cshtml";
+}
+
+<form action="Edit" method="post" enctype="multipart/form-data">
+    <img src="@Url.Content("~/Images/" + Model.image)" alt="babyimage"  width="200" height="100"/>
+    <input type="file" name="file" value="Chọn hình từ máy tính..."/>
+    <textarea rows="7" cols="100" name="desc">@Model.description</textarea>
+    @Html.Action("AlbumBabyManapartial", "Baby")
+    <input type="submit" value="Save"/>
+</form>
