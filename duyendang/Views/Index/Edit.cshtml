@@ -1,0 +1,21 @@
+﻿@using duyendang.Models
+@model cataloge
+
+@{
+    ViewBag.Title = "Edit Home Page";
+    Layout = "~/Views/Shared/layout_admin.cshtml";
+}
+
+<h2>Edit</h2>
+@*@using (Html.BeginForm("Edit", "Index", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{*@
+<form action="Edit" method="post" enctype="multipart/form-data">
+    <img src="@Url.Content("~/Images/" + @Model.image)" alt="image" width="325" height="261" />
+    <input type="file" name="file" value="Chọn hình từ máy tính.." />
+    <textarea rows="10" cols="100" name="desc">@Model.description</textarea>
+    <input type="submit" name="save" value="Save" />
+</form>
+    
+    
+
+   

@@ -37,5 +37,36 @@ namespace duyendang.Controllers
         {
             return PartialView();
         }
+
+        [HttpGet]
+        public ActionResult Edit()
+        {
+            cataloge Cataloge = db.cataloges.SingleOrDefault(c => c.id == 1);
+
+            if (Cataloge == null)
+            {
+                //Trả về trang báo lỗi
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(Cataloge);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(FormCollection f, HttpPostedFileBase file)
+        {
+            cataloge cata = db.cataloges.SingleOrDefault(c => c.id == 1);
+            if (file != null && file.ContentLength > 0)
+            {
+                string filename = System.IO.Path.GetFileName(file.FileName);
+                string path = Server.MapPath("~/Images/" + filename);
+                file.SaveAs(path);
+                cata.image = filename;
+            }
+            string desc = f["desc"];
+            cata.description = desc;
+            db.SaveChanges();
+            return RedirectToAction("Edit");
+        }
     }
 }

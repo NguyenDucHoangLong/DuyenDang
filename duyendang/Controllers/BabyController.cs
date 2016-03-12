@@ -33,5 +33,18 @@ namespace duyendang.Controllers
             // catalogeId = 3 => lay ra danh sach image cua Be Yeu
             return PartialView(lst);
         }
+
+        public ActionResult Edit()
+        {
+            var info = db.information.SingleOrDefault(c => c.catalogeId == 3);
+            if (info == null)
+            {
+                //Trả về trang báo lỗi
+                Response.StatusCode = 404;
+                return null;
+            }
+            ViewBag.album = db.albums;
+            return View(info);
+        }
     }
 }

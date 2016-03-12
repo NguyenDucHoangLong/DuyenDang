@@ -1,0 +1,82 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Duyên Dáng Admin</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin-2.css" rel="stylesheet">
+    <link href="" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="index.html">SB Admin v2.0</a> -->
+                <a class="navbar-brand" style="color : blue">Trang Quản Trị</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+
+                        <li>
+                            <a href="#"> Đổi mật khẩu</a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Quản lý nội dung <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="demo" class="collapse">
+                                <li>
+                                    <a href="#">Trang chủ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Photobook</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bé yêu</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lịch để bàn</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sổ ký tên ngày cưới</a>
+                                </li>
+                                <li>
+                                    <a href="#">Thiệp cưới, thiệp mời</a>
+                                </li>
+                                <li>
+                                    <a href="#">Card Visit</a>
+                                </li>
+                                <li>
+                                    <a href="#">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="page-wrapper">
+            @RenderBody()
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+

@@ -33,34 +33,34 @@
                 <tbody>
                     <tr>
                         <td style="padding-left: 30px;padding-right: 0px;border-top-width: 0px;padding-top: 0px;width: 300px;">
-                            <h4> Tiệm chụp hình DUYÊN DÁNG: </h4>
-                            <ul> - Địa chỉ: Đường 30/4, P. Trung Dũng, TP. Biên Hòa, Đồng Nai </ul>
-                            <ul> - Điện thoại: 0989.210.469 - 0901.552.071 </ul>
-                            <ul> - Email: duyendang176@gmail.com </ul>
+                            <h4> Tiệm chụp hình DUYÊN DÁNG: </h4><br />
+                            <p> - Địa chỉ: Đường 30/4, P. Trung Dũng, TP. Biên Hòa, Đồng Nai </p><br />
+                            <p> - Điện thoại: 0989.210.469 - 0901.552.071 </p><br />
+                            <p> - Email: duyendang176@gmail.com </p><br />
                         </td>
 
-                        <td width="50px" style="padding-left: 0px;width: 30px;height: 345px;border-left-width: 0px;">
-                            <img src="/Images/hoavan-doc.jpg">
+                        <td width="50px" style="padding-left: 0px;width: 30px;height: 370px;border-left-width: 0px;">
+                            <img src="/Images/hoavan-doc.jpg" height="300" width="15">
                         </td>
 
                         <td width="300px">
-                           
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.154473596057!2d106.82072501396493!3d10.951701558930642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deabf09297c5%3A0x802bb3ab09941f4a!2zVGnhu4dtIGNo4bulcCBow6xuaCBEdXnDqm4gRMOhbmc!5e0!3m2!1svi!2s!4v1457589627208" width="380" height="260" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </td>
 
-                        <td width="50px" style="padding-left: 0px;width: 30px;height: 345px;border-left-width: 0px;">
-                            <img src="/Images/hoavan-doc.jpg">
+                        <td width="50px" style="padding-left: 0px;width: 30px;height: 370px;border-left-width: 0px;">
+                            <img src="/Images/hoavan-doc.jpg" height="300" width="15">
                         </td>
 
                         <td style="padding-left: 30px;padding-right: 0px;border-top-width: 0px;padding-top: 0px;width: 300px;">
-                            <h4 class="text-center"> Gửi liên hệ: </h4>
+                            <h4 class="text-center"> <b>Gửi liên hệ</b></h4>
                             <form action="/" method="post">
                                 <div class="form-group">
                                     <label>Họ và tên</label>
-                                    <input class="form-control" type="text" name="fullname"  />
+                                    <input class="form-control" type="text" name="fullname"/>
                                 </div>
                                 <div class="form-group">
                                     <label>Di động</label>
-                                    <input class="form-control" type="number" name="phone" />
+                                    <input class="form-control" type="number" name="phone"/>
                                 </div>
                                 <div class="form-group">
                                     <label>Email</label>
@@ -70,8 +70,10 @@
                                     <label>Nội dung liên hệ</label>
                                     <input class="form-control" type="text"  name="content" />
                                 </div>
-                              
-                                <input class="btn btn-primary" id="btnSubmit" type="submit" name="submit" value="Gửi" />
+                                <div class="text-center">
+                                    <input class="btn btn-primary" id="btnSubmit" type="submit" name="submit" value="Gửi" style="width: 100px" />
+                                </div>
+                                
                             </form>
                         </td>
                     </tr>
@@ -89,32 +91,3 @@
 </table>
 
 
-<script type="text/javascript">
-    $('#btnSubmit').click(function() {
-        var error = 0;
-
-        if ($('#txtNoidung').val() == "") {
-            $('#NoiDungTrong').text("Nội dung không được để trống");
-            error++;
-        }
-        else {
-            $('#NoiDungTrong').text("");
-        }
-
-        if (id == 'sdt' && (isNaN(value) == true || value.length < 10 || value.length > 13))
-        {
-            $('#sdtSai').text("Vui lòng kiểm tra lại số điện thoại");
-            error++;
-        }
-        else {
-            $('#sdtSai').text("");
-        }
-
-        if (error != 0) {
-            return false;
-        }
-        else {
-            return true;
-        }
-    });
-</script>

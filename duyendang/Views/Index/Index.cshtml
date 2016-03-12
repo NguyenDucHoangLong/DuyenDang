@@ -10,7 +10,7 @@
 @Html.Action("SliderPartial", "Index")
 <!--End Slider-->
 
-<table width="1215px" border="0" cellspacing="0" cellpadding="0" style="margin-top: 200px">
+<table width="1215px" border="0" cellspacing="0" cellpadding="0" style="margin-top: 200px" class="remove-border">
     <tr>
         <td height="45px" width="51px" style="background: transparent url(../../Images/box-left-top.png) no-repeat left;"></td>
         <td height="45px" width="1099px" style="background: transparent url(../../Images/box-center-top.png) repeat-x left;"></td>
@@ -28,25 +28,25 @@
                 </tr>
                 <tr>
                     <td class="bogoc" height="261px" width="325px">
-                        <img src="@Url.Content("~/Images/" + Model.image)" />
-                      @*  <img src="~/Images/pic1.jpg" />*@
+                        <img src="@Url.Content("~/Images/" + Model.image)" width="325" height="261" />
+                        @*  <img src="~/Images/pic1.jpg" />*@
                     </td>
                     <td style="padding-left: 40px; color: #696969; text-align: justify;">
                         @*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit sagittis
-                        arcu ac hendrerit. Nulla vitae congue turpis, ut rutrum sapien. Donec quis
-                        venenatis nisl. Proin enim massa, euismod eu nulla at, gravida sollicitudin
-                        dolor. In pellentesque bibendum arcu, id ornare mi ultricies non. In mauris
-                        ipsum, pellentesque vel erat eget, luctus convallis nibh.
-                        <br /><br />
-                        Donec hendrerit in
-                        nulla nec dignissim. Morbi mattis, quam nec lobortis luctus, dui mauris iaculis
-                        sem, ac laoreet urna odio sit amet eros. Phasellus sodales fermentum libero quis
-                        vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes,
-                        nascetur ridiculus mus.
-                        <br /><br />
-                        Curabitur mattis turpis sit amet magna venenatis,
-                        efficitur pharetra eros dapibus. Class aptent taci ti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Suspendisse tincidunt.*@
+                            arcu ac hendrerit. Nulla vitae congue turpis, ut rutrum sapien. Donec quis
+                            venenatis nisl. Proin enim massa, euismod eu nulla at, gravida sollicitudin
+                            dolor. In pellentesque bibendum arcu, id ornare mi ultricies non. In mauris
+                            ipsum, pellentesque vel erat eget, luctus convallis nibh.
+                            <br /><br />
+                            Donec hendrerit in
+                            nulla nec dignissim. Morbi mattis, quam nec lobortis luctus, dui mauris iaculis
+                            sem, ac laoreet urna odio sit amet eros. Phasellus sodales fermentum libero quis
+                            vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes,
+                            nascetur ridiculus mus.
+                            <br /><br />
+                            Curabitur mattis turpis sit amet magna venenatis,
+                            efficitur pharetra eros dapibus. Class aptent taci ti sociosqu ad litora
+                            torquent per conubia nostra, per inceptos himenaeos. Suspendisse tincidunt.*@
                         @Model.description
                     </td>
                 </tr>
@@ -56,8 +56,8 @@
                     </td>
                 </tr>
             </table>
-            
-           @* CategoryHomePartial *@
+
+            @* CategoryHomePartial *@
             @Html.Action("CategoryHomePartial", "Index")
 
             <!-- END - NOI DUNG TRANG CHU -->

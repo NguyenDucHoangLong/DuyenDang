@@ -23,7 +23,7 @@ namespace duyendang.Controllers
             if(account == null)
             {
                 ModelState.AddModelError("Fail", "Tên đăng nhập hoặc mật khẩu không đúng!");
-                return RedirectToAction("Index");
+                return null;
             }
             else
             {
