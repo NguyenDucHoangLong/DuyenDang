@@ -3,11 +3,28 @@
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/layout_admin.cshtml";
 }
+<div class="col-md-12">
+    <form action="Edit" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="@Url.Content("~/Images/" + Model.image)" alt="babyimage" width="300" height="250" />
+                
+            </div>
+            <div class="col-md-8">
+                <textarea rows="10" cols="85" name="desc">@Model.description</textarea>
+                <input type="file" name="file" value="Chọn hình từ máy tính..." />
+            </div>
 
-<form action="Edit" method="post" enctype="multipart/form-data">
-    <img src="@Url.Content("~/Images/" + Model.image)" alt="babyimage"  width="200" height="100"/>
-    <input type="file" name="file" value="Chọn hình từ máy tính..."/>
-    <textarea rows="7" cols="100" name="desc">@Model.description</textarea>
-    @Html.Action("AlbumBabyManapartial", "Baby")
-    <input type="submit" value="Save"/>
-</form>
+        </div>
+        <div class="row">
+            @Html.Action("AlbumBabyManapartial", "Index")
+        </div>
+        <input class="btn btn-primary" type="submit" value="Lưu" style="width: 100px"/>
+    </form>
+</div>
+
+
+
+
+
+

@@ -1,39 +1,46 @@
 ﻿@using duyendang.Models;
 @model List<album>
-<table>
+
+<style>
+    .tableAlbum tr{
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+</style>
+<table class="tableAlbum" style="margin-top: 20px">
     <tr>
-        <td><img class="vien" src="@Url.Content("~/Images/" + Model[0].image)" height="50" width="100" /></td>
+        <td><img class="vien" src="@Url.Content("~/Images/" + Model[0].image)" height="100" width="150" /></td>
         <td>
             <input type="file" name="file" value="Chọn hình từ máy tính..." />
         </td>
 
     </tr>
     <tr>
-        <td><img class="vien" src="@Url.Content("~/Images/" + Model[1].image)" height="50" width="100" /></td>
+        <td><img class="vien" src="@Url.Content("~/Images/" + Model[1].image)" height="100" width="150" /></td>
         <td>
             <input type="file" name="file" value="Chọn hình từ máy tính..." />
         </td>
     </tr>
     <tr>
-        <td><img class="vien" src="@Url.Content("~/Images/" + Model[2].image)" height="50" width="100" /></td>
+        <td><img class="vien" src="@Url.Content("~/Images/" + Model[2].image)" height="100" width="150" /></td>
         <td>
             <input type="file" name="file" value="Chọn hình từ máy tính..." />
         </td>
     </tr>
     <tr>
-        <td><img class="vien" src="@Url.Content("~/Images/" + Model[3].image)" height="50" width="100" /></td>
+        <td><img class="vien" src="@Url.Content("~/Images/" + Model[3].image)" height="100" width="150" /></td>
         <td>
             <input type="file" name="file" value="Chọn hình từ máy tính..." />
         </td>
     </tr>
     <tr>
-        <td><img class="vien" src="@Url.Content("~/Images/" + Model[4].image)" height="50" width="100" /></td>
+        <td><img class="vien" src="@Url.Content("~/Images/" + Model[4].image)" height="100" width="150" /></td>
         <td>
             <input type="file" name="file" value="Chọn hình từ máy tính..." />
         </td>
     </tr>
     <tr>
-        <td><img class="vien" src="@Url.Content("~/Images/" + Model[5].image)" height="50" width="100" /></td>
+        <td><img class="vien" src="@Url.Content("~/Images/" + Model[5].image)" height="100" width="150" /></td>
         <td>
             <input type="file" name="file" value="Chọn hình từ máy tính..." />
         </td>

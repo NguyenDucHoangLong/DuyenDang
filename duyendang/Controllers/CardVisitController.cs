@@ -28,15 +28,21 @@ namespace duyendang.Controllers
         [HttpGet]
         public ActionResult Edit()
         {
-            var alb = db.albums.Where(a => a.catalogeId == 7).ToList();
-
-            if (alb == null)
+            if (Session["user"] == null)
+                return RedirectToAction("Index", "Admin");
+            else
             {
-                //Trả về trang báo lỗi
-                Response.StatusCode = 404;
-                return null;
+                var alb = db.albums.Where(a => a.catalogeId == 7).ToList();
+
+                if (alb == null)
+                {
+                    //Trả về trang báo lỗi
+                    Response.StatusCode = 404;
+                    return null;
+                }
+                return View(alb);
             }
-            return View(alb);
+
         }
 
         [HttpPost]

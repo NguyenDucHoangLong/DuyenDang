@@ -362,11 +362,10 @@
     <Content Include="Views\Ecard\Index.cshtml" />
     <Content Include="Views\CardVisit\Edit.cshtml" />
     <Content Include="Views\Ecard\Edit.cshtml" />
+    <Content Include="Views\Index\CatalogeEditPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\CardVisit\" />
-    <Folder Include="Views\Ecard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

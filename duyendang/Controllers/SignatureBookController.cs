@@ -16,7 +16,7 @@ namespace duyendang.Controllers
         {
             var alb = db.albums.Where(a => a.catalogeId == 5).ToList();
 
-            if(alb == null)
+            if (alb == null)
             {
                 //Trả về trang báo lỗi
                 Response.StatusCode = 404;
@@ -28,25 +28,31 @@ namespace duyendang.Controllers
         [HttpGet]
         public ActionResult Edit()
         {
-            var alb = db.albums.Where(a => a.catalogeId == 5).ToList();
-
-            if (alb == null)
+            if (Session["user"] == null)
+                return RedirectToAction("Index", "Admin");
+            else
             {
-                //Trả về trang báo lỗi
-                Response.StatusCode = 404;
-                return null;
+                var alb = db.albums.Where(a => a.catalogeId == 5).ToList();
+
+                if (alb == null)
+                {
+                    //Trả về trang báo lỗi
+                    Response.StatusCode = 404;
+                    return null;
+                }
+                return View(alb);
             }
-            return View(alb);
+
         }
 
         [HttpPost]
-        public ActionResult Edit(HttpPostedFileBase []file)
+        public ActionResult Edit(HttpPostedFileBase[] file)
         {
             var alb = db.albums.Where(a => a.catalogeId == 5).ToList();
 
-            for (int i = 0; i <=2; i++)
+            for (int i = 0; i <= 2; i++)
             {
-                if(file[i] != null && file[i].ContentLength > 0)
+                if (file[i] != null && file[i].ContentLength > 0)
                 {
                     string filename = System.IO.Path.GetFileName(file[i].FileName);
                     string path = Server.MapPath("~/Images/" + filename);

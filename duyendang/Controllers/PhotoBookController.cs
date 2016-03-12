@@ -20,15 +20,21 @@ namespace duyendang.Controllers
         [HttpGet]
         public ActionResult Edit()
         {
-            var lst = db.information.Where(c => c.catalogeId == 2).ToList();
-            return View(lst);
+            if (Session["user"] == null)
+                return RedirectToAction("Index", "Admin");
+            else
+            {
+                var lst = db.information.Where(c => c.catalogeId == 2).ToList();
+                return View(lst);
+            }
+
         }
-            
+
         [HttpPost]
         public ActionResult Edit(FormCollection formContent, HttpPostedFileBase[] file)
         {
             var lst = db.information.Where(c => c.catalogeId == 2).ToList();
-            
+
             for (int i = 0; i < lst.Count; i++)
             {
                 if (file[i] != null && file[i].ContentLength > 0)

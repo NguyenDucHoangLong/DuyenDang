@@ -6,14 +6,26 @@
     Layout = "~/Views/Shared/layout_admin.cshtml";
 }
 
-<h2>Edit</h2>
-<form action="Edit" method="post" enctype="multipart/form-data">
-    <img src="@Url.Content("~/Images/" + @Model.image)" alt="image" width="325" height="261" />
-    <input type="file" name="file" value="Chọn hình từ máy tính.." />
-    <textarea rows="10" cols="100" name="desc">@Model.description</textarea>
-    <input type="submit" name="save" value="Save" />
-</form>
-    
-    
+<div class="row">
+    <div class="col-md-12">
+        <form action="Edit" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="@Url.Content("~/Images/" + @Model.image)" alt="image" width="325" height="261" />
+                    <input type="file" name="file" value="Chọn hình từ máy tính.." />
+                </div>
+                <div class="col-md-8">
+                    <textarea rows="15" cols="90" name="desc">@Model.description</textarea>
+                </div>
+            </div>
+            <div class="row">
+                @Html.Action("CatalogeEditPartial", "Index")
+            </div>
+            <input class="btn btn-primary" type="submit" name="save" value="Lưu" style="width:100px"/>
+        </form>
+    </div>
+</div>
 
-   
+
+
+
