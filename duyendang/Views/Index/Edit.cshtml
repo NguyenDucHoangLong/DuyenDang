@@ -7,8 +7,6 @@
 }
 
 <h2>Edit</h2>
-@*@using (Html.BeginForm("Edit", "Index", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{*@
 <form action="Edit" method="post" enctype="multipart/form-data">
     <img src="@Url.Content("~/Images/" + @Model.image)" alt="image" width="325" height="261" />
     <input type="file" name="file" value="Chọn hình từ máy tính.." />

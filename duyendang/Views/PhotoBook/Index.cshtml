@@ -1,4 +1,6 @@
-﻿
+﻿@using duyendang.Models
+@model List<information>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/layout_DuyenDang.cshtml";
@@ -21,7 +23,7 @@
                 <table border="0" cellpadding="0" cellspacing="0" width="1099px">
                     <tr>
                         <td align="left" width="712px">
-                            <img src="../../Images/book1.jpg" />
+                            <img src="@Url.Content("~/Images/" + @Model[0].image)" />
                         </td>
                         <td width="40px"></td>
                         <td align="left" style="vertical-align: top" width="347px">
@@ -33,13 +35,7 @@
                                 </tr>
                                 <tr>
                                     <td style="padding-top: 20px; line-height: 24px; padding-right: 20px" class="canhchu">
-                                        Là một kiểu album khái niệm mới. Được hiểu
-                                        như một loại SÁCH ẢNH, để ghi chép lại các
-                                        câu truyện của bạn theo dạng hình ảnh.
-                                        <br />
-                                        Với chất lượng in ảnh hiện đại trên nhiều loại
-                                        giấy cao cấp, giúp chất lượng hình ảnh chân
-                                        thật hơn và không phai màu theo thời gian.
+                                        <pre>@Model[0].description</pre>
                                     </td>
                                 </tr>
                             </table>
@@ -60,19 +56,14 @@
                                 </tr>
                                 <tr>
                                     <td style="padding-top: 30px; line-height: 26px;" class="canhchu">
-                                        Photobook có thể dành cho tất cả các chủ đề. Ví dụ: để ghi nhớ các sự kiện như
-                                        đi du lịch hay đi nghỉ, vũ hội, đám cưới, sinh nhật, ảnh cưới, cuốn sách ảnh em bé,
-                                        sách ảnh tốt nghiệp, album ảnh gia đình của năm mới, ...
-                                        <br />
-                                        Đối với các doanh nghiệp có thể sử dụng sách ảnh để thực hiện các kiểu catologue
-                                        sang trọng, bắt mắt với khách hành và đối tác.
+                                        <pre>@Model[1].description</pre>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                         <td width="20px"></td>
                         <td width="410px">
-                            <img src="../../Images/book2.png" />
+                            <img src="@Url.Content("~/Images/" + @Model[1].image)" />
                         </td>
                     </tr>
                 </table>
@@ -82,19 +73,13 @@
                 <table border="0" cellpadding="0" cellspacing="0" width="1099px">
                     <tr>
                         <td align="right" width="438px">
-                            <img src="../../Images/book-3.jpg" />
+                            <img src="@Url.Content("~/Images/" + @Model[2].image)" />
                         </td>
                         <td width="40px"></td>
                         <td width="621px" align="left" class="canhchu" style="line-height: 26px; vertical-align: top; padding-right: 20px">
                             <img src="../../Images/book-t3.png" /> <span style="display:none;">Có bao nhiêu kiểm photobook?, co bao nhieu kieu photobook, cac kieu photobook</span>
                             <br /><br />
-                            Photobook có nhiều kiểu trình bày và tùy vào chất lượng giấy in mà bạn chọn, gồm
-                            hai kiểu nói chung sau:<br />
-                            - Photobook kiểu tạp chí: là loại sách thông dụng nhất, với chất liệu giấy mỏng, gọn
-                            nhẹ, không phai màu theo thời gian.<br />
-                            - Photobook kiểu mở phẳng: được đóng cuốn với phương pháp mở phẳng, hình ảnh
-                            sẽ không bị che khuất bởi gáy sách. Chất liệu giấy bền chắc, từng trang giấy được
-                            phủ 2 lớp màng không thấm nước.
+                            <pre>@Model[2].description</pre>
                         </td>
                     </tr>
                 </table>

@@ -355,6 +355,7 @@
     <Content Include="Views\Shared\layout_admin.cshtml" />
     <Content Include="Views\Index\Edit.cshtml" />
     <Content Include="Views\Baby\Edit.cshtml" />
+    <Content Include="Views\PhotoBook\Edit.cshtml" />
     <Content Include="Views\Baby\AlbumBabyManapartial.cshtml" />
     <Content Include="Views\SignatureBook\Edit.cshtml" />
     <Content Include="Views\CardVisit\Index.cshtml" />
@@ -364,6 +365,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\CardVisit\" />
+    <Folder Include="Views\Ecard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
