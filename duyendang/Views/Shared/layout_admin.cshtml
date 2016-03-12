@@ -35,35 +35,35 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="#"> Đổi mật khẩu</a>
+                            <a href=""> Đổi mật khẩu</a>
                         </li>
 
                         <li>
                             <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Quản lý nội dung <i class="fa fa-fw fa-caret-down"></i></a>
                             <ul id="demo" class="collapse">
                                 <li>
-                                    <a href="#">Trang chủ</a>
+                                    <a href="@Url.Action("Manager","Admin")">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a href="#">Photobook</a>
+                                    <a href="@Url.Action("Edit", "PhotoBook")">Photobook</a>
                                 </li>
                                 <li>
-                                    <a href="#">Bé yêu</a>
+                                    <a href="@Url.Action("Edit", "Baby")">Bé yêu</a>
                                 </li>
                                 <li>
                                     <a href="#">Lịch để bàn</a>
                                 </li>
                                 <li>
-                                    <a href="#">Sổ ký tên ngày cưới</a>
+                                    <a href="@Url.Action("Edit", "SignatureBook")">Sổ ký tên ngày cưới</a>
                                 </li>
                                 <li>
-                                    <a href="#">Thiệp cưới, thiệp mời</a>
+                                    <a href="@Url.Action("Edit", "ECard")">Thiệp cưới, thiệp mời</a>
                                 </li>
                                 <li>
-                                    <a href="#">Card Visit</a>
+                                    <a href="@Url.Action("Edit", "CardVisit")">Card Visit</a>
                                 </li>
                                 <li>
-                                    <a href="#">Liên hệ</a>
+                                    <a href="@Url.Action("Edit", "Contact")">Liên hệ</a>
                                 </li>
                             </ul>
                         </li>

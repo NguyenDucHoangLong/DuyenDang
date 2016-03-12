@@ -1,0 +1,20 @@
+﻿@using duyendang.Models;
+@model List<album>
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/layout_admin.cshtml";
+}
+
+<form action="Edit" method="post" enctype="multipart/form-data">
+    <table>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <tr>
+                <td><img src="@Url.Content("~/Images/" + Model[i].image)" alt="babyimage" width="200" height="100" /></td>
+                <td><input type="file" name="file" value="Chọn hình từ máy tính..." /></td>
+            </tr>
+        }
+    </table>
+    <br />
+    <input type="submit" value="Lưu" />
+</form>
