@@ -163,3 +163,17 @@
     -o-border-radius: 10px;
     border-radius: 10px;
 }
+pre {
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    word-break: normal !important;
+    background-color: transparent !important;
+    border: none !important;
+    font-family: Tahoma !important;
+    font-size:13pt !important;
+    color: #696969 !important;
+    text-align: justify !important;
+}

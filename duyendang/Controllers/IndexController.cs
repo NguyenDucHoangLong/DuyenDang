@@ -53,14 +53,14 @@ namespace duyendang.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(FormCollection f, HttpPostedFileBase file)
+        public ActionResult Edit(FormCollection f, HttpPostedFileBase []file)
         {
             cataloge cata = db.cataloges.SingleOrDefault(c => c.id == 1);
-            if (file != null && file.ContentLength > 0)
+            if (file[0] != null && file[0].ContentLength > 0)
             {
-                string filename = System.IO.Path.GetFileName(file.FileName);
+                string filename = System.IO.Path.GetFileName(file[0].FileName);
                 string path = Server.MapPath("~/Images/" + filename);
-                file.SaveAs(path);
+                file[0].SaveAs(path);
                 cata.image = filename;
             }
             string desc = f["desc"];
