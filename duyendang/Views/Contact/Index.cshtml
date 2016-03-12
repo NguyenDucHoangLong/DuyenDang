@@ -1,4 +1,5 @@
 ﻿
+
 @{
     ViewBag.Title = "Liên hệ";
     Layout = "~/Views/Shared/layout_DuyenDang.cshtml";
@@ -53,14 +54,15 @@
 
                         <td style="padding-left: 30px;padding-right: 0px;border-top-width: 0px;padding-top: 0px;width: 300px;">
                             <h4 class="text-center"> <b>Gửi liên hệ</b></h4>
-                            <form action="/" method="post">
+                            @using (Html.BeginForm("SendEmail", "Contact", FormMethod.Post))
+                            {
                                 <div class="form-group">
                                     <label>Họ và tên</label>
-                                    <input class="form-control" type="text" name="fullname"/>
+                                    <input class="form-control" type="text" name="fullname" />
                                 </div>
                                 <div class="form-group">
                                     <label>Di động</label>
-                                    <input class="form-control" type="number" name="phone"/>
+                                    <input class="form-control" type="number" name="phone" />
                                 </div>
                                 <div class="form-group">
                                     <label>Email</label>
@@ -68,13 +70,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Nội dung liên hệ</label>
-                                    <input class="form-control" type="text"  name="content" />
+                                    <input class="form-control" type="text" name="content" />
                                 </div>
                                 <div class="text-center">
                                     <input class="btn btn-primary" id="btnSubmit" type="submit" name="submit" value="Gửi" style="width: 100px" />
                                 </div>
-                                
-                            </form>
+                            }
                         </td>
                     </tr>
                 </tbody>
