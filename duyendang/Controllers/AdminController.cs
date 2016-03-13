@@ -52,14 +52,19 @@ namespace duyendang.Controllers
             //string user = f["user"];
             string oldpassword = f["oldPassword"];
             string newpassword = f["newPassword1"];
+            string confirmpass = f["newPassword"];
 
-            string user = Session["user"].ToString();
-            string password = Session["password"].ToString();
-            user account = db.users.Where(a => a.name == user && a.password == oldpassword).FirstOrDefault();
-            Session["password"] = newpassword;
-
-            account.password = newpassword;
-            db.SaveChanges();
+            if (newpassword == confirmpass)
+            {
+                string user = Session["user"].ToString();
+                user account = db.users.Where(a => a.name == user && a.password == oldpassword).FirstOrDefault();
+                if (account != null)
+                {
+                    account.password = newpassword;
+                    db.SaveChanges();
+                    Session["password"] = newpassword;
+                }
+            }
             return RedirectToAction("Manager");
         }
 
