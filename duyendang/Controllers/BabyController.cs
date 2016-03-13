@@ -8,8 +8,8 @@ namespace duyendang.Controllers
 {
     public class BabyController : Controller
     {
-        
-         DUYENDANGDBEntities db = new DUYENDANGDBEntities();
+
+        DUYENDANGDBEntities db = new DUYENDANGDBEntities();
         // GET: Baby
         public ActionResult Index()
         {
@@ -29,7 +29,7 @@ namespace duyendang.Controllers
         //Album Be Yeu partial
         public PartialViewResult AlbumBabyPartial()
         {
-            var lst = db.albums.Where(c => c.catalogeId ==3).ToList();
+            var lst = db.albums.Where(c => c.catalogeId == 3).ToList();
             // catalogeId = 3 => lay ra danh sach image cua Be Yeu
             return PartialView(lst);
         }
@@ -43,19 +43,25 @@ namespace duyendang.Controllers
         [HttpGet]
         public ActionResult Edit()
         {
-            var info = db.information.SingleOrDefault(c => c.catalogeId == 3);
-            if (info == null)
+            if (Session["user"] == null)
+                return RedirectToAction("Index", "Admin");
+            else
             {
-                //Trả về trang báo lỗi
-                Response.StatusCode = 404;
-                return null;
+                var info = db.information.SingleOrDefault(c => c.catalogeId == 3);
+                if (info == null)
+                {
+                    //Trả về trang báo lỗi
+                    Response.StatusCode = 404;
+                    return null;
+                }
+                ViewBag.album = db.albums;
+                return View(info);
             }
-            ViewBag.album = db.albums;
-            return View(info);
+
         }
 
         [HttpPost]
-        public ActionResult Edit(FormCollection f, HttpPostedFileBase []file)
+        public ActionResult Edit(FormCollection f, HttpPostedFileBase[] file)
         {
             var info = db.information.SingleOrDefault(c => c.catalogeId == 3);
             var lst = db.albums.Where(c => c.catalogeId == 3).ToList();
@@ -66,7 +72,7 @@ namespace duyendang.Controllers
                     string filename = System.IO.Path.GetFileName(file[i].FileName);
                     string path = Server.MapPath("~/Images/" + filename);
                     file[i].SaveAs(path);
-                    lst[i-1].image = filename;
+                    lst[i - 1].image = filename;
                 }
             }
 
