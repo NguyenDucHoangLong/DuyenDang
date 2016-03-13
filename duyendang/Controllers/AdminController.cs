@@ -43,8 +43,7 @@ namespace duyendang.Controllers
             {
                 string user = Session["user"].ToString();
                 string password = Session["password"].ToString();
-                user account = db.users.Where(a => a.name == user && a.password == password).FirstOrDefault();
-                return View(account);
+                return View();
             }
         }
 
