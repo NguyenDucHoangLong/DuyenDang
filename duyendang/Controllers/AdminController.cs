@@ -28,6 +28,7 @@ namespace duyendang.Controllers
             else
             {
                 Session["user"] = username;
+                Session["password"] = password;
                 return RedirectToAction("Manager");
             }
         }
@@ -35,10 +36,35 @@ namespace duyendang.Controllers
         public ActionResult Manager()
         {
             if (Session["user"] == null)
+            {
                 return RedirectToAction("Index");
+            }
             else
-                return View();
+            {
+                string user = Session["user"].ToString();
+                string password = Session["password"].ToString();
+                user account = db.users.Where(a => a.name == user && a.password == password).FirstOrDefault();
+                return View(account);
+            }
         }
+
+        public ActionResult ChangePassword(FormCollection f)
+        {
+            //string user = f["user"];
+            string oldpassword = f["oldPassword"];
+            string newpassword = f["newPassword1"];
+
+            string user = Session["user"].ToString();
+            string password = Session["password"].ToString();
+            user account = db.users.Where(a => a.name == user && a.password == oldpassword).FirstOrDefault();
+            Session["password"] = newpassword;
+
+            account.password = newpassword;
+            db.SaveChanges();
+            return RedirectToAction("Manager");
+        }
+
+
 
     }
 }

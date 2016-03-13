@@ -1,4 +1,5 @@
-﻿@{
+﻿@model duyendang.Models.user
+@{
     ViewBag.Title = "Admin Manager";
     Layout = "~/Views/Shared/layout_admin.cshtml";
 }
@@ -9,19 +10,46 @@
             <form action="ChangePassword" method="post">
                 <div class="form-group">
                     <label>Mật khẩu cũ</label>
-                    <input class="form-control" type="password" name="oldPassword" />
+                    <input class="form-control" type="password" name="oldPassword" value="@Model.password"/>
                 </div>
                 <div class="form-group">
                     <label>Mật khẩu mới</label>
-                    <input class="form-control" type="password" name="oldPassword" />
+                    <input class="form-control" type="password" name="newPassword1" id="newPassword1" />
                 </div>
                 <div class="form-group">
                     <label>Nhập lại mật khẩu mới</label>
-                    <input class="form-control" type="password" name="oldPassword" />
+                    <input class="form-control" type="password" name="newPassword" id="newPassword"/>
                 </div>
+                <p style="color:red"><div class="" id="passwordStrength"></div></p>
                 <input class="btn btn-primary" type="submit" name="submit" value="Xong" />
             </form>
         </div>
     </div>
     
 </div>
+<script>
+    $(document).ready(function () {
+        $('#newPassword1, #newPassword').on('keyup', function (e) {
+            if($('#newPassword1').val() == '' && $('#newPassword').val() == '')
+            {
+                $('#passwordStrength').removeClass().html('');
+                return false;
+            }
+
+            if($('#newPassword1').val() != '' &&  $('#newPassword').val() != '' && $('#newPassword1').val() != $('#newPassword').val())
+            {
+                $('#passwordStrength').removeClass().addClass('error').html('Mật khẩu không phù hợp');
+                return false;
+            }
+
+            // Must be at least 6 characters long
+            var okRegex = new RegExp("(?=.{6,}).*", "g");
+            if (okRegex.test($(this).val()) === false) {
+                // If ok regex doesn't match the password
+                $('#passwordStrength').removeClass().addClass('error').html('Mật khẩu phải dài hơn 6 ký tự');
+                return false;
+            }
+            return true;
+        });
+    });
+</script>
