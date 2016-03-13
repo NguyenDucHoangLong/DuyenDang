@@ -5,16 +5,27 @@
     Layout = "~/Views/Shared/layout_admin.cshtml";
 }
 
-<form action="Edit" method="post" enctype="multipart/form-data">
-    <table>
+<div class="row">
+    <div></div>
+    <form action="Edit" method="post" enctype="multipart/form-data">
         @for (int i = 0; i < Model.Count; i++)
         {
-        <tr>
-            <td><img src="@Url.Content("~/Images/" + Model[i].image)" alt="babyimage" width="200" height="100" /></td>
-            <td><input type="file" name="file" value="Chọn hình từ máy tính..." /></td>
-        </tr>
+            <div class="col-md-4 text-center">
+                <img src="@Url.Content("~/Images/" + Model[i].image)" alt="babyimage" width="100%" height="300" />
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <span class="btn btn-primary btn-file">
+                            Browse&hellip; <input type="file" name="file">
+                        </span>
+                    </span>
+                    <input type="text" class="form-control" readonly>
+                </div>
+            </div>
+
         }
-    </table>
-    <br />
-    <input type="submit" value="Lưu"/>
-</form>
+
+        <div class="col-md-12 text-center" style="margin-top: 30px">
+            <input class="btn btn-primary" type="submit" value="Lưu" style="width: 100px" />
+        </div>
+    </form>
+</div>

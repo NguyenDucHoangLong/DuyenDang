@@ -29,7 +29,7 @@ namespace duyendang.Controllers
             {
                 Session["user"] = username;
                 Session["password"] = password;
-                return RedirectToAction("Manager");
+                return RedirectToAction("Edit", "Index");
             }
         }
 

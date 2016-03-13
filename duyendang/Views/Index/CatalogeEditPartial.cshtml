@@ -5,41 +5,88 @@
     Layout = null;
 }
 
-<div class="col-md-12">
-    <div class="col-md-4">
-        <h3>Photobook</h3>
-        <img src="@Url.Content("~/Images/" + Model[0].image)" alt="@Model[0].image" width="300" height="125"/>
-        <input type="file" name="file"/>
-        <textarea rows="5" cols="36" name="@Model[0].id">@Model[0].description</textarea>
+<div class="col-md-4 text-center">
+    <h3>Photobook</h3>
+    <img src="@Url.Content("~/Images/" + Model[0].image)" alt="@Model[0].image" width="100%" height="125" />
+    <div class="input-group">
+        <span class="input-group-btn">
+            <span class="btn btn-primary btn-file">
+                Browse&hellip; <input type="file" name="file">
+            </span>
+        </span>
+        <input type="text" class="form-control" readonly>
     </div>
-    <div class="col-md-4">
-        <h3>Bé yêu</h3>
-        <img src="@Url.Content("~/Images/" + Model[1].image)" alt="@Model[1].image" width="300" height="125" />
-        <input type="file" name="file" />
-        <textarea rows="5" cols="36" name="@Model[1].id">@Model[1].description</textarea>
+    <div class="form-group"><textarea rows="5" class="form-control" name="@Model[0].id">@Model[0].description</textarea></div>
+
+</div>
+<div class="col-md-4 text-center">
+    <h3>Bé yêu</h3>
+    <img src="@Url.Content("~/Images/" + Model[1].image)" alt="@Model[1].image" width="100%" height="125" />
+    <div class="input-group">
+        <span class="input-group-btn">
+            <span class="btn btn-primary btn-file">
+                Browse&hellip; <input type="file" name="file">
+            </span>
+        </span>
+        <input type="text" class="form-control" readonly>
     </div>
-    <div class="col-md-4">
-        <h3>Lịch để bàn</h3>
-        <img src="@Url.Content("~/Images/" + Model[2].image)" alt="@Model[2].image" width="300" height="125" />
-        <input type="file" name="file" />
-        <textarea rows="5" cols="36" name="@Model[2].id">@Model[2].description</textarea>
+    <div class="form-group"><textarea rows="5" class="form-control" name="@Model[1].id">@Model[1].description</textarea></div>
+
+</div>
+<div class="col-md-4 text-center">
+    <h3>Lịch để bàn</h3>
+    <img src="@Url.Content("~/Images/" + Model[2].image)" alt="@Model[2].image" width="100%" height="125" />
+    <div class="input-group">
+        <span class="input-group-btn">
+            <span class="btn btn-primary btn-file">
+                Browse&hellip; <input type="file" name="file">
+            </span>
+        </span>
+        <input type="text" class="form-control" readonly>
     </div>
-    <div class="col-md-4">
-        <h3>Sổ ký tên</h3>
-        <img src="@Url.Content("~/Images/" + Model[3].image)" alt="@Model[3].image" width="300" height="125" />
-        <input type="file" name="file" />
-        <textarea rows="5" cols="36" name="@Model[3].id">@Model[3].description</textarea>
+    <div class="form-group"><textarea rows="5" class="form-control" name="@Model[2].id">@Model[2].description</textarea></div>
+
+</div>
+<div class="col-md-4 text-center">
+    <h3>Sổ ký tên</h3>
+    <img src="@Url.Content("~/Images/" + Model[3].image)" alt="@Model[3].image" width="100%" height="125" />
+    <div class="input-group">
+        <span class="input-group-btn">
+            <span class="btn btn-primary btn-file">
+                Browse&hellip; <input type="file" name="file">
+            </span>
+        </span>
+        <input type="text" class="form-control" readonly>
     </div>
-    <div class="col-md-4">
-        <h3>Thiệp mời</h3>
-        <img src="@Url.Content("~/Images/" + Model[4].image)" alt="@Model[4].image" width="300" height="125" />
-        <input type="file" name="file" />
-        <textarea rows="5" cols="36" name="@Model[4].id">@Model[4].description</textarea>
+    <div class="form-group"><textarea rows="5" class="form-control" name="@Model[3].id">@Model[3].description</textarea></div>
+
+</div>
+<div class="col-md-4 text-center">
+    <h3>Thiệp mời</h3>
+    <img src="@Url.Content("~/Images/" + Model[4].image)" alt="@Model[4].image" width="100%" height="125" />
+    <div class="input-group">
+        <span class="input-group-btn">
+            <span class="btn btn-primary btn-file">
+                Browse&hellip; <input type="file" name="file">
+            </span>
+        </span>
+        <input type="text" class="form-control" readonly>
     </div>
-    <div class="col-md-4">
-        <h3>Card Visit</h3>
-        <img src="@Url.Content("~/Images/" + Model[5].image)" alt="@Model[5].image" width="300" height="125" />
-        <input type="file" name="file" />
-        <textarea rows="5" cols="36" name="@Model[5].id">@Model[5].description</textarea>
+    <div class="form-group"><textarea rows="5" class="form-control" name="@Model[4].id">@Model[4].description</textarea></div>
+
+</div>
+<div class="col-md-4 text-center">
+    <h3>Card Visit</h3>
+    <img src="@Url.Content("~/Images/" + Model[5].image)" alt="@Model[5].image" width="100%" height="125" />
+    <div class="input-group">
+        <span class="input-group-btn">
+            <span class="btn btn-primary btn-file">
+                Browse&hellip; <input type="file" name="file">
+            </span>
+        </span>
+        <input type="text" class="form-control" readonly>
+    </div>
+    <div class="form-group">
+        <textarea class="form-control" rows="5" name="@Model[5].id">@Model[5].description</textarea>
     </div>
 </div>
