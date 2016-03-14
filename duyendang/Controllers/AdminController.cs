@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using duyendang.Models;
 using System.Data.Entity;
+using System.Web.Helpers;
 
 namespace duyendang.Controllers
 {
@@ -19,7 +20,8 @@ namespace duyendang.Controllers
 
         public ActionResult CheckLogin(string username, string password)
         {
-            user account = db.users.Where(a => a.name == username && a.password == password).FirstOrDefault();
+            String hash = Crypto.SHA256(password);
+            user account = db.users.Where(a => a.name == username && a.password == hash).FirstOrDefault();
             if(account == null)
             {
                 ModelState.AddModelError("Fail", "Tên đăng nhập hoặc mật khẩu không đúng!");
@@ -28,7 +30,7 @@ namespace duyendang.Controllers
             else
             {
                 Session["user"] = username;
-                Session["password"] = password;
+                Session["password"] = hash;
                 return RedirectToAction("Edit", "Index");
             }
         }
@@ -57,12 +59,14 @@ namespace duyendang.Controllers
             if (newpassword == confirmpass)
             {
                 string user = Session["user"].ToString();
-                user account = db.users.Where(a => a.name == user && a.password == oldpassword).FirstOrDefault();
+                String oldPassHash = Crypto.SHA256(oldpassword);
+                user account = db.users.Where(a => a.name == user && a.password == oldPassHash).FirstOrDefault();
                 if (account != null)
                 {
-                    account.password = newpassword;
+                    String newPassHash = Crypto.SHA256(newpassword);
+                    account.password = newPassHash;
                     db.SaveChanges();
-                    Session["password"] = newpassword;
+                    Session["password"] = newPassHash;
                 }
             }
             return RedirectToAction("Manager");
