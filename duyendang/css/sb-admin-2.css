@@ -14,7 +14,8 @@ body {
 
 #page-wrapper {
     padding: 15px;
-    background-color: #fff;
+    background-color: #f8f8f8;
+    min-height: 768px;
 }
 
 @media(min-width:768px) {
@@ -93,9 +94,6 @@ body {
     padding: 15px;
 }
 
-.sidebar ul li {
-    border-bottom: 1px solid #e7e7e7;
-}
 
 .sidebar ul li a.active {
     background-color: #eee;
@@ -132,6 +130,8 @@ body {
         position: absolute;
         width: 250px;
         margin-top: 51px;
+        height: 100%;
+        display: block;
     }
 
     .navbar-top-links .dropdown-messages,
@@ -373,4 +373,35 @@ table.dataTable thead .sorting:after {
 input[readonly] {
   background-color: white !important;
   cursor: text !important;
+}
+
+.title-admin{
+    font-family: Tahoma;
+    font-size: 25px;
+    font-weight:700;
+    color: #e7e7e7 !important;
+}
+
+.nav li{
+    font-size:17px;
+    background-color: #38444F !important;
+    border-bottom: 1px solid #5b6975;
+}
+
+.nav li a{
+    color: #e7e7e7;
+}
+ 
+.nav li a:hover{
+    background-color: #404e5b !important;
+}
+
+.navbar-default{
+    background-color: #222A32 !important;
+    color: #e7e7e7 !important;
+    border-bottom-color: #5b6975 !important;
+}
+
+body{
+    background-color: #222A32 !important;
 }

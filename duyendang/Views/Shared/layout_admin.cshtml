@@ -6,14 +6,17 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="../css/sb-admin-2.css" rel="stylesheet">
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
     <link href="" rel="stylesheet" />
     <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/png" href="~/Images/logo.png" />
 </head>
 <body>
     <div id="wrapper">
@@ -27,7 +30,10 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- <a class="navbar-brand" href="index.html">SB Admin v2.0</a> -->
-                <a class="navbar-brand" style="color : blue">Trang Quản Trị</a>
+                <img src="~/Images/logo.png" width="50" height="50" style="float: left" />
+                <a class="navbar-brand title-admin">
+                    Trang Quản Trị
+                </a>
             </div>
             <!-- /.navbar-header -->
 
@@ -35,34 +41,28 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="@Url.Action("Edit","Index")">Trang chủ</a>
+                            <a href="@Url.Action("Edit","Index")"><i class="fa fa-home"></i> Trang chủ</a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Edit", "PhotoBook")">Photobook</a>
+                            <a href="@Url.Action("Edit", "PhotoBook")"><i class="fa fa-book"></i> Photobook</a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Edit", "Baby")">Bé yêu</a>
+                            <a href="@Url.Action("Edit", "Baby")"> <i class="fa fa-female"></i> Bé yêu</a>
                         </li>
                         <li>
-                            <a href="#">Lịch để bàn</a>
+                            <a href="@Url.Action("Edit", "SignatureBook")"><i class="fa fa-pencil-square-o"></i> Sổ ký tên ngày cưới</a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Edit", "SignatureBook")">Sổ ký tên ngày cưới</a>
+                            <a href="@Url.Action("Edit", "ECard")"><i class="fa fa-envelope"></i> Thiệp cưới, thiệp mời</a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Edit", "ECard")">Thiệp cưới, thiệp mời</a>
+                            <a href="@Url.Action("Edit", "CardVisit")"><i class="fa fa-credit-card-alt"></i> Card Visit</a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Edit", "CardVisit")">Card Visit</a>
+                            <a href="@Url.Action("Manager", "Admin")"><i class="fa fa-refresh"></i> Đổi mật khẩu</a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Manager", "Admin")"> Đổi mật khẩu</a>
-                        </li>
-                        <li>
-                            <a href="#"> </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("Index", "Index")"> Đến Trang chủ</a>
+                            <a href="@Url.Action("Index", "Index")"><i class="fa fa-reply"></i> Đến Trang chủ</a>
                         </li>
 
 
