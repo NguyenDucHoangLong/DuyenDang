@@ -100,7 +100,7 @@
     color: #dac5d6;
     font-size: 13px;
     line-height: 22px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .Font_BayBuom
 {
@@ -175,4 +175,18 @@ pre {
     font-size:13pt !important;
     color: #696969 !important;
     text-align: justify !important;
+}
+
+p{
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    word-break: normal !important;
+    background-color: transparent !important;
+    border: none !important;
+    font-family: Tahoma !important;
+    font-size:13pt !important;
+    color: #696969 !important;
 }
